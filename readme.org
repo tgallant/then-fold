@@ -31,5 +31,4 @@ function t2 (x) {
   })
 
 thenFold(example(5), [ t1, t2 ]) // => 7
-}
 #+END_SRC
