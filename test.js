@@ -3,9 +3,9 @@
 const test = require('tape')
 const thenFold = require('./index')
 
-function testing () {
+function testing (x) {
   return new Promise((resolve, reject) => {
-    resolve(5)
+    resolve(x)
   })
 }
 
@@ -25,7 +25,7 @@ test('thenFold', t => {
   t.test('only return values', st => {
     const arr = [ p1, p1, p1 ]
 
-    thenFold(testing(), arr).then(n => {
+    thenFold(testing(5), arr).then(n => {
       st.equal(n, 8)
       st.end()
     })
@@ -34,7 +34,7 @@ test('thenFold', t => {
   t.test('olny return promises', st => {
     const arr = [ p2, p2, p2 ]
 
-    thenFold(testing(), arr).then(n => {
+    thenFold(testing(5), arr).then(n => {
       st.equal(n, 8)
       st.end()
     })
@@ -43,7 +43,7 @@ test('thenFold', t => {
   t.test('mixed', st => {
     const arr = [ p2, p2, p1, p1, p2, p1 ]
 
-    thenFold(testing(), arr).then(n => {
+    thenFold(testing(5), arr).then(n => {
       st.equal(n, 11)
       st.end()
     })
