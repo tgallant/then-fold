@@ -1,0 +1,22 @@
+{
+  "name": "then-fold",
+  "version": "1.0.0",
+  "description": "Useful helper function for working with promises",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "tape test.js"
+  },
+  "keywords": [
+    "promise",
+    "then",
+    "fold",
+    "flow"
+  ],
+  "author": "Tim Gallant",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "standard": "^8.5.0",
+    "tape": "^4.6.2"
+  }
+}
